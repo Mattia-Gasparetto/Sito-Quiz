@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Definizione del documento HTML e configurazione della lingua -->
+    <meta charset="UTF-8">
+    <!-- Configurazione per garantire un layout responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domande Aperte</title>
+    <style>
+        /* Stile base per il corpo della pagina */
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Gradiente di sfondo */
+            color: #333;
+        }
+        /* Stile per l'header */
+        header {
+            background: rgba(0, 0, 0, 0.7); /* Sfondo semi-trasparente */
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+        /* Stile per il contenuto principale */
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 30px auto; /* Centrare il contenitore */
+            background: #fff; /* Sfondo bianco per contrasto */
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Ombreggiatura */
+        }
+        /* Stile per il timer */
+        .timer {
+            font-size: 1.2em;
+            color: #d32f2f; /* Rosso per evidenziare il tempo */
+            text-align: right;
+        }
+        /* Stile generale per i div all'interno del form */
+        form div {
+            margin-bottom: 20px;
+        }
+        /* Stile per le etichette delle domande */
+        form label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+        /* Stile per le aree di testo */
+        form textarea {
+            width: calc(100% - 20px); /* Larghezza dinamica */
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 1rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Leggera ombreggiatura */
+            resize: none; /* Disabilita il ridimensionamento */
+            margin: 0 2px;
+        }
+        /* Stile per il pulsante */
+        .button {
+            display: inline-block;
+            background: #ff7e5f; /* Colore arancione */
+            color: #fff;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 50px; /* Angoli arrotondati */
+            font-weight: bold;
+            transition: background 0.3s ease; /* Effetto di transizione */
+            cursor: pointer;
+            border: none;
+        }
+        .button:hover {
+            background: #feb47b; /* Cambia colore al passaggio del mouse */
+        }
+    </style>
+</head>
+<body>
+    <!-- Header della pagina -->
+    <header>
+        <h1>Domande Aperte</h1>
+    </header>
+    <!-- Contenuto principale -->
+    <main>
+        <div class="timer">Tempo rimasto: 05:00</div> <!-- Sezione timer -->
+        <form id="domandeAperte"> <!-- Form principale -->
+            <div>
+                <label for="q1">1. Scrivi una breve descrizione di te stesso:</label>
+                <!-- Area di testo per la prima domanda -->
+                <textarea id="q1" name="domanda1" rows="4" placeholder="Scrivi qui..."></textarea>
+            </div>
+            <div>
+                <label for="q2">2. Qual è il tuo libro preferito e perché?</label>
+                <!-- Area di testo per la seconda domanda -->
+                <textarea id="q2" name="domanda2" rows="4" placeholder="Scrivi qui..."></textarea>
+            </div>
+            <div>
+                <label for="q3">3. Dove ti vedi fra 5 anni?</label>
+                <!-- Area di testo per la terza domanda -->
+                <textarea id="q3" name="domanda3" rows="4" placeholder="Scrivi qui..."></textarea>
+            </div>
+            <!-- Pulsante per procedere -->
+            <button class="button" type="button" onclick="salvaDomandeAperte()">Prosegui</button>
+        </form> 
+    </main>
+    <!-- Collegamento al file JavaScript esterno -->
+    <script src="script.js"></script>
+</body>
+</html>
+
+
